@@ -1,0 +1,7 @@
+In PFI, there are multiple processes running in server, which means it is possible that one blotter or its related blotter data will be updated by multiple processes at the same time. To make sure the data synchronism between original hierarchical blotter data and flat one, we have to provide a mechanism to synchronize these data in concurrent scenarios.
+
+
+So how to test this feature?
+
+
+Any free tools avaliable?
