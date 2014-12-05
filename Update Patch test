@@ -5,3 +5,9 @@ even if after i restore all the code and executable files back?
 
 
 if strange things happens repeatly, try to clear cache? restart PC? reset environment?
+
+caused reason:
+when the PFI installation process was force stopped for some reason, PFI can not be installed or un-installed.
+Might solve method:
+
+http://answers.microsoft.com/en-us/windows/forum/windows_7-windows_programs/unable-to-installuninstall-software-in-windows-7/9a078e66-58ed-4a3d-a223-b9eb9b82f662
