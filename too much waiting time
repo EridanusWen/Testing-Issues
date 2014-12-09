@@ -1,0 +1,26 @@
+
+                    ///// too much waiting time!
+                    if (NTSPnEnvironment)
+                    {
+                    Task<string> networkSPnTask = Task.Factory.StartNew<string>(() => networkTestScenario.NetworkSPnTestScenario(NTSPnTestMachine, NTSPnDatabase, NTSPnSmoke));
+                     Task.WaitAll(networkSPnTask);
+                     networkSPnTaskID = networkSPnTask.Result;
+                    }
+                    if(INDSPnEnvironment)
+                    {
+                    Task<string> individualSPnTask = Task.Factory.StartNew<string>(() => individualTestScenario.IndividualSPnTestScenario(INDSPnServerTestMachine, INDSPnWorkstationTestMachine, INDSPnDatabase, INDSPnSmoke));
+                        Task.WaitAll(individualSPnTask);
+                        individualSPnTaskID = individualSPnTask.Result;
+                    }
+                    if(INDSPn_1Environment)
+                    {
+                    Task<string> individualSPn_1Task = Task.Factory.StartNew<string>(() => individualTestScenario2.IndividualSPn_1TestScenario(INDSPn_1ServerTestMachine, INDSPn_1WorkstaionTestMachine, INDSPn_1Database, INDSPn_1Smoke));
+                        Task.WaitAll(individualSPn_1Task);
+                        individualSPn_1TaskID = individualSPn_1Task.Result;
+                    }
+                    if (NTSPn_1Environment)
+                    {
+                    Task<string> networkSPn_1Task = Task.Factory.StartNew<string>(() => networkTestScenario2.NetworkSPn_1TestScenario(NTSPn_1TestMachine, NTSPn_1Database, NTSPn_1Smoke));
+                        Task.WaitAll();
+                        networkSPn_1TaskID = networkSPn_1Task.Result;
+                    }
